@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "package_id": "tagtoolbox-v7-visual-r162-checkpoint-20260801",
+  "status": "accepted-checkpoint-not-full-tree-final",
+  "created_at": "2026-08-01T18:12:00+08:00",
+  "source_database": {
+    "file": "databases/classification-source-r161.sqlite",
+    "revision": 161,
+    "bytes": 58736640,
+    "sha256": "FCEA913A0F43ECF9DADBE3F844E16FD8F452CC923FC7812B846657E52B10595B"
+  },
+  "latest_database": {
+    "file": "databases/classification-latest-r162.sqlite",
+    "revision": 162,
+    "source_revision": 161,
+    "bytes": 58736640,
+    "sha256": "53CC2087CAED3D600AA0E716E20AA4198621AA39CB76904EBD570F963A6A66D0",
+    "tag_total": 152715,
+    "classified": 53067,
+    "entity": 99648,
+    "taxonomy_nodes": 1279
+  },
+  "browser": {
+    "root": "app/browser",
+    "active_generation": "3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18",
+    "previous_generations_included": 0
+  },
+  "accepted_scope": {
+    "root_key": "visual",
+    "quality_prompt_tags": 12,
+    "quality_atomic_leaves": 9,
+    "quality_is_first_l2": true,
+    "frozen_other_semantic_l1": 13,
+    "character_tree_frozen": true
+  },
+  "validation": {
+    "single_l1_atomic_checks": "74/74 PASS",
+    "checkpoint_checks": "7/7 PASS",
+    "browser_bridge": "PASS; 152715 records; 7 shards; 15 slots; 1058 final leaves",
+    "build_v7_generic_unit_tests": "3/3 PASS"
+  },
+  "known_remaining": [
+    "visual/style/pop/anime/anime contains 196 tags and remains in the visual calibration batch"
+  ],
+  "excluded": [
+    "rejected full-tree merged r162",
+    "old sequential and atomic test checkpoints",
+    "full-scan audit CSV files",
+    "previous browser data generation",
+    "snapshots, exports, WAL, SHM and pycache"
+  ]
+}

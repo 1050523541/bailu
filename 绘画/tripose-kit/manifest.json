@@ -1,0 +1,200 @@
+{
+  "name": "tripose-kit",
+  "display_name": "TriPose-SDXL-Anima-Krea2-Wan22 I2V图+视频工作流",
+  "version": "1.6.1",
+  "description": "TriPose v1.6.1：SDXL 三态+单图 / Anima / Krea2 / Wan2.2 I2V；布局与用户定稿对齐；人工+Agent 分工作流安装与自检",
+  "base": "SDXL/Illustrious/NoobAI 全量 checkpoint；Anima/Krea2 UNET+CLIP+VAE；Wan2.2 I2V High/Low + UMT5 + wan_2.1_vae",
+  "docs": {
+    "readme": "README.md",
+    "install_zh": "依赖与安装.md",
+    "agent_playbook": "AGENT_执行方案.md",
+    "dependencies_index": "DEPENDENCIES.md"
+  },
+  "scripts": {
+    "sync": "scripts/sync-to-comfy.ps1",
+    "verify": "scripts/verify-install.ps1",
+    "pack": "scripts/pack-release.ps1"
+  },
+  "workflow": "workflows/CF-TriPose-SDXL-template.json",
+  "workflows": {
+    "tripose_triple_sdxl": "workflows/CF-TriPose-SDXL-template.json",
+    "tripose_single_sdxl": "workflows/CF-TriPose-SDXL-single.json",
+    "tripose_single_anima": "workflows/CF-TriPose-Anima-single.json",
+    "tripose_single_krea2": "workflows/CF-TriPose-Krea2-single.json",
+    "wan22_i2v_single_frame": "workflows/CF-Wan22-I2V-single-frame.json"
+  },
+  "custom_nodes": [
+    {
+      "id": "ComfyUI-Impact-Pack",
+      "required": true,
+      "provides": ["FaceDetailer"],
+      "url": "https://github.com/ltdrdata/ComfyUI-Impact-Pack",
+      "install_path": "custom_nodes/ComfyUI-Impact-Pack",
+      "used_by": [
+        "tripose_triple_sdxl",
+        "tripose_single_sdxl",
+        "tripose_single_anima",
+        "tripose_single_krea2"
+      ]
+    },
+    {
+      "id": "ComfyUI-Impact-Subpack",
+      "required": true,
+      "provides": ["UltralyticsDetectorProvider"],
+      "url": "https://github.com/ltdrdata/ComfyUI-Impact-Subpack",
+      "install_path": "custom_nodes/ComfyUI-Impact-Subpack",
+      "pip": ["ultralytics"],
+      "used_by": [
+        "tripose_triple_sdxl",
+        "tripose_single_sdxl",
+        "tripose_single_anima",
+        "tripose_single_krea2"
+      ]
+    },
+    {
+      "id": "rgthree-comfy",
+      "required": true,
+      "provides": ["Seed (rgthree)", "Power Lora Loader (rgthree)"],
+      "url": "https://github.com/rgthree/rgthree-comfy",
+      "install_path": "custom_nodes/rgthree-comfy"
+    },
+    {
+      "id": "ComfyUI-TriPose-Utils",
+      "required": true,
+      "provides": ["TriPoseZhTagMap", "TriPoseLaneEnable"],
+      "url": "local:packages/tripose-kit/custom_nodes/ComfyUI-TriPose-Utils",
+      "install_path": "custom_nodes/ComfyUI-TriPose-Utils",
+      "maps": [
+        "maps/danbooru_zh.sqlite",
+        "maps/danbooru_zh_nsfw.sqlite",
+        "maps/tripose_aliases.json"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": "face_yolov8m",
+      "required": true,
+      "filename": "face_yolov8m.pt",
+      "path": "models/ultralytics/bbox/face_yolov8m.pt",
+      "url": "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov8m.pt",
+      "used_by": [
+        "tripose_triple_sdxl",
+        "tripose_single_sdxl",
+        "tripose_single_anima",
+        "tripose_single_krea2"
+      ]
+    },
+    {
+      "id": "hand_yolov8s",
+      "required": false,
+      "filename": "hand_yolov8s.pt",
+      "path": "models/ultralytics/bbox/hand_yolov8s.pt",
+      "url": "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov8s.pt"
+    },
+    {
+      "id": "person_yolov8m-seg",
+      "required": false,
+      "filename": "person_yolov8m-seg.pt",
+      "path": "models/ultralytics/segm/person_yolov8m-seg.pt",
+      "url": "https://huggingface.co/Bingsu/adetailer/resolve/main/person_yolov8m-seg.pt"
+    },
+    {
+      "id": "sdxl_checkpoint",
+      "required": "for_sdxl",
+      "filename": "*.safetensors (full checkpoint)",
+      "path": "models/checkpoints/",
+      "notes": "Any SDXL/Illustrious/NoobAI full ckpt; do not use UNET-only",
+      "used_by": ["tripose_triple_sdxl", "tripose_single_sdxl"],
+      "catalog": "profiles/checkpoints.catalog.md"
+    },
+    {
+      "id": "anima_unet_miaomiao",
+      "required": "for_anima",
+      "filename": "miaomiao3DHarem_animaLH3D10.safetensors",
+      "path": "models/diffusion_models/miaomiao3DHarem_animaLH3D10.safetensors",
+      "used_by": ["tripose_single_anima"]
+    },
+    {
+      "id": "anima_clip_qwen3",
+      "required": "for_anima",
+      "filename": "qwen_3_06b_base.safetensors",
+      "path": "models/text_encoders/qwen_3_06b_base.safetensors",
+      "used_by": ["tripose_single_anima"]
+    },
+    {
+      "id": "qwen_image_vae",
+      "required": "for_anima_or_krea2",
+      "filename": "qwen_image_vae.safetensors",
+      "path": "models/vae/qwen_image_vae.safetensors",
+      "used_by": ["tripose_single_anima", "tripose_single_krea2"]
+    },
+    {
+      "id": "krea2_unet_moody",
+      "required": "for_krea2",
+      "filename": "moodyKrea2Mix_cutieXEDITION.safetensors",
+      "path": "models/diffusion_models/moodyKrea2Mix_cutieXEDITION.safetensors",
+      "used_by": ["tripose_single_krea2"]
+    },
+    {
+      "id": "krea2_clip_qwen3vl",
+      "required": "for_krea2",
+      "filename": "qwen3vl_4b_fp8_scaled.safetensors",
+      "path": "models/text_encoders/qwen3vl_4b_fp8_scaled.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors",
+      "mirror": "https://hf-mirror.com/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors",
+      "notes": "CLIPLoader type=krea2; do NOT substitute Anima qwen_3_06b_base",
+      "used_by": ["tripose_single_krea2"]
+    },
+    {
+      "id": "wan22_snatchkiss_high",
+      "required": "for_wan",
+      "filename": "DasiwaWAN22I2V14BLightspeed_snatchkissHighV11.safetensors",
+      "path": "models/diffusion_models/DasiwaWAN22I2V14BLightspeed_snatchkissHighV11.safetensors",
+      "used_by": ["wan22_i2v_single_frame"]
+    },
+    {
+      "id": "wan22_snatchkiss_low",
+      "required": "for_wan",
+      "filename": "DasiwaWAN22I2V14BLightspeed_snatchkissLowV11.safetensors",
+      "path": "models/diffusion_models/DasiwaWAN22I2V14BLightspeed_snatchkissLowV11.safetensors",
+      "url": "https://civitai.com/api/download/models/2953485",
+      "used_by": ["wan22_i2v_single_frame"]
+    },
+    {
+      "id": "wan_umt5",
+      "required": "for_wan",
+      "filename": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "path": "models/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "notes": "CLIPLoader type=wan; Comfy-Org Wan_2.1/2.2 repackaged split_files/text_encoders",
+      "used_by": ["wan22_i2v_single_frame"]
+    },
+    {
+      "id": "wan_2_1_vae",
+      "required": "for_wan",
+      "filename": "wan_2.1_vae.safetensors",
+      "path": "models/vae/wan_2.1_vae.safetensors",
+      "notes": "Comfy-Org Wan_2.1/2.2 repackaged split_files/vae",
+      "used_by": ["wan22_i2v_single_frame"]
+    }
+  ],
+  "maps": {
+    "danbooru_zh": "maps/danbooru_zh.sqlite",
+    "danbooru_zh_nsfw": "maps/danbooru_zh_nsfw.sqlite",
+    "tripose_aliases": "maps/tripose_aliases.json"
+  },
+  "checkpoints_catalog": "profiles/checkpoints.catalog.md",
+  "example_profile": "profiles/soft-gothic.example.md",
+  "example_profile_zh": "profiles/soft-gothic.zh.example.md",
+  "notes": [
+    "Restart ComfyUI after installing Impact-Subpack or TriPose-Utils",
+    "SDXL template: full checkpoint only (not UNET-only)",
+    "Anima/Krea2/Wan require their own UNET+CLIP+VAE; see 依赖与安装.md section 四",
+    "Agent must not download >=100MB weights without explicit user approval",
+    "Keep seed + control_after_generate slots when seed is linked",
+    "Default dictionary danbooru_zh+nsfw uses sqlite lexicons (zh_danbooru.json deprecated)",
+    "Do not rearrange user-tuned canvas layout when syncing",
+    "Comfy.VueNodes.Enabled=false recommended while using rgthree Power Lora / Seed widgets",
+    "Wan Lightspeed: do not stack lightx2v LoRA"
+  ]
+}

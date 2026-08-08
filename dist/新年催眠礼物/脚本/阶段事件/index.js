@@ -1,0 +1,2 @@
+const e=[{key:'芸曦',keyword:'【阶段事件·芸曦】'},{key:'戚巧瑜',keyword:'【阶段事件·戚巧瑜】'},{key:'璐瑶',keyword:'【阶段事件·璐瑶】'}];$(async()=>{await waitGlobalInitialized('Mvu'),eventOn(Mvu.events.VARIABLE_UPDATE_ENDED,(t,o)=>{const n=_.get(o,'stat_data',{}),s=_.get(t,'stat_data',{});for(const{key:t,keyword:o}of e){const e=_.get(n,`${t}.催眠阶段`,0),a=_.get(s,`${t}.催眠阶段`,0);Number(a)>Number(e)&&(console.info(`[新年催眠礼物] ${t} 催眠阶段推进 ${e} -> ${a}`),injectPrompts([{id:`新年催眠礼物:${t}:阶段事件`,position:'none',depth:0,role:'system',content:o,should_scan:!0}],{once:!0}))}})});
+//# sourceMappingURL=index.js.map

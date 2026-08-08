@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'"
+    >
+    <meta name="color-scheme" content="dark">
+    <title>Tag Toolbox v3</title>
+    <link rel="stylesheet" href="./styles.css?v=20260802-slot-colors-v2">
+    <script src="./app.js?v=20260802-slot-colors-v2" defer></script>
+  </head>
+  <body>
+    <header class="modebar">
+      <div class="brand">
+        <strong>Tag Toolbox</strong>
+        <span>词库工具箱</span>
+      </div>
+
+      <nav class="mode-tabs" aria-label="工具模式">
+        <button type="button" class="mode-tab" data-mode="toolbox" aria-controls="mode-host">
+          词库组合
+        </button>
+        <button type="button" class="mode-tab" data-mode="editor" aria-controls="mode-host">
+          分类编辑
+        </button>
+      </nav>
+
+      <div class="mode-aside">
+        <div class="mode-status" aria-live="polite">
+          <span class="status-dot" id="mode-status-dot" aria-hidden="true"></span>
+          <span id="mode-status-text">正在载入…</span>
+          <span class="mode-dataset" id="mode-dataset" hidden></span>
+        </div>
+        <div
+          class="mode-editor-actions"
+          id="mode-editor-actions"
+          role="toolbar"
+          aria-label="分类编辑操作"
+          hidden
+        >
+          <button type="button" class="mode-action" data-editor-cmd="undo" disabled>撤销</button>
+          <button type="button" class="mode-action" data-editor-cmd="redo" disabled>重做</button>
+          <button type="button" class="mode-action" data-editor-cmd="snapshot">保存进度</button>
+          <button type="button" class="mode-action" data-editor-cmd="manage-saves">进度管理</button>
+          <button type="button" class="mode-action mode-action-accent" data-editor-cmd="export">
+            导出
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="mode-host" id="mode-host">
+      <div class="mode-loading" id="mode-loading" role="status">
+        <span class="spinner" aria-hidden="true"></span>
+        <span>正在载入工具模式…</span>
+      </div>
+    </main>
+
+    <noscript>Tag Toolbox 需要启用 JavaScript。</noscript>
+  </body>
+</html>

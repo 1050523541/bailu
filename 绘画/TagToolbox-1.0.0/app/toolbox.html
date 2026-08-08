@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'"
+    >
+    <meta name="color-scheme" content="dark">
+    <title>Tag Toolbox v3</title>
+    <link rel="stylesheet" href="./toolbox-styles.css?v=20260802-slot-colors-v2">
+    <script src="./toolbox-app.js?v=20260802-slot-colors-v2" defer></script>
+  </head>
+  <body data-mobile-view="browse">
+    <a class="skip-link" href="#search">跳到标签搜索</a>
+
+    <div
+      class="loading-overlay"
+      id="loading-overlay"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <div class="loading-card">
+        <strong id="loading-title">正在读取数据清单</strong>
+        <p id="loading-detail">准备加载分类、作品与词库分片。</p>
+        <progress id="loading-progress" max="100" value="0">0%</progress>
+        <span id="loading-stats">0%</span>
+        <button class="btn primary" id="retry-load" type="button" hidden>重新加载</button>
+      </div>
+    </div>
+
+    <div class="app" id="app-shell" aria-busy="true" inert>
+      <header class="app-header">
+        <h1>
+          Tag Toolbox
+          <span id="dataset-summary">分类词库接入 · 本地离线</span>
+        </h1>
+        <div class="header-status">
+          <span id="shard-summary">等待数据</span>
+          <span class="badge" id="dataset-status">未就绪</span>
+        </div>
+      </header>
+
+      <nav class="mobile-switcher" aria-label="移动端工作区">
+        <button type="button" data-mobile-target="browse" aria-pressed="true">浏览词库</button>
+        <button type="button" data-mobile-target="compose" aria-pressed="false">
+          组合与导出
+          <span id="mobile-picked-count">0</span>
+        </button>
+      </nav>
+
+      <main class="main" id="main-content">
+        <section class="panel browser-panel" id="browser-panel" aria-labelledby="browser-title">
+          <div class="panel-head">
+            <h2 id="browser-title" tabindex="-1">词库浏览器</h2>
+            <label class="sr-only" for="search">搜索标签与别名</label>
+            <input
+              id="search"
+              type="search"
+              autocomplete="off"
+              enterkeyhint="search"
+              placeholder="搜中文 / 英文 / 别名 / 作品…"
+              disabled
+            >
+            <button class="btn" id="clear-search" type="button">清除</button>
+            <span class="meta" id="results-summary" aria-live="polite">等待索引</span>
+          </div>
+
+          <div class="filters l1-filters" id="type-filters" aria-label="一级分类"></div>
+
+          <div class="filter-switches" aria-label="来源与安全筛选">
+            <div class="switch-row">
+              <button
+                class="chip switch-toggle"
+                id="source-toggle"
+                type="button"
+                aria-pressed="false"
+              >来源筛选</button>
+              <div class="filters compact" id="source-filters" hidden></div>
+            </div>
+            <div class="switch-row">
+              <button
+                class="chip switch-toggle"
+                id="safety-toggle"
+                type="button"
+                aria-pressed="false"
+              >安全筛选</button>
+              <div class="filters compact" id="safety-filters" hidden></div>
+            </div>
+            <div class="switch-actions">
+              <button
+                class="chip popularity-sort"
+                id="popularity-sort"
+                type="button"
+                aria-pressed="false"
+                aria-label="热度排行：已关闭"
+                title="开启后按热度排序；关闭时按英文词典顺序"
+              >热度排行</button>
+              <button class="chip" id="reset-filters" type="button">重置筛选</button>
+            </div>
+          </div>
+
+          <div class="sub-tree" id="sub-tree" aria-label="二至五级分类"></div>
+
+          <div class="work-bar" id="work-bar">
+            <div class="work-bar-head">
+              <span class="work-bar-title">作品筛选</span>
+              <input
+                id="work-filter"
+                type="search"
+                autocomplete="off"
+                placeholder="筛中文 / 英文作品名…"
+              >
+            </div>
+            <div class="filters work-filters" id="work-filters"></div>
+            <div
+              class="resizer resizer-work"
+              id="work-resizer"
+              role="separator"
+              aria-orientation="horizontal"
+              aria-label="调整作品栏高度"
+              title="拖动调整作品栏高度"
+            ></div>
+          </div>
+
+          <div class="results-toolbar">
+            <span id="results-hint">默认按英文词典顺序 · 最多显示前 2500 条</span>
+            <span id="artist-load-status"></span>
+          </div>
+          <div class="list flow result-list" id="lex-list" aria-label="标签搜索结果"></div>
+        </section>
+
+        <div
+          class="resizer resizer-col"
+          id="col-resizer"
+          role="separator"
+          aria-orientation="vertical"
+          aria-label="调整左右占比"
+          title="拖动调整左右占比；双击复位"
+        ></div>
+
+        <section class="panel composer-panel" id="picked-panel" aria-labelledby="composer-title">
+          <div class="panel-head">
+            <h2 id="composer-title" tabindex="-1">已选组合</h2>
+            <div class="toolbar">
+              <button class="btn" id="toggle-empty-slots" type="button">显示空槽</button>
+              <button class="btn primary" id="open-presets" type="button">提示词预设管理</button>
+              <button class="btn danger" id="clear-selection" type="button">清空</button>
+            </div>
+            <span class="meta" id="picked-count">0 词</span>
+          </div>
+          <div class="list slot-list" id="slot-list" aria-label="已选标签槽位"></div>
+        </section>
+      </main>
+
+      <div
+        class="resizer resizer-row"
+        id="row-resizer"
+        role="separator"
+        aria-orientation="horizontal"
+        aria-label="调整导出栏高度"
+        title="拖动调整导出栏高度；双击复位"
+      ></div>
+
+      <footer id="export-footer">
+        <div class="export-tabs" role="group" aria-label="导出格式">
+          <span class="label">导出</span>
+          <button class="chip" type="button" aria-pressed="true" data-export-mode="en">英文串</button>
+          <button class="chip" type="button" aria-pressed="false" data-export-mode="zh">中文串</button>
+          <button class="chip" type="button" aria-pressed="false" data-export-mode="bilingual">中英对照</button>
+          <button class="chip" type="button" aria-pressed="false" data-export-mode="negative">负向串</button>
+          <button class="chip artist-export" type="button" aria-pressed="false" data-export-mode="artist">画师串</button>
+          <span class="export-summary" id="export-summary">正向 0 · 负向 0 · 画师 0</span>
+          <button class="btn primary" id="copy-export" type="button">一键复制</button>
+        </div>
+        <label class="sr-only" for="export-box">当前导出内容</label>
+        <textarea class="export-box" id="export-box" readonly spellcheck="false"></textarea>
+        <div class="bilingual-panes" id="bilingual-panes" aria-label="中英对照两栏">
+          <div class="bilingual-pane">
+            <div class="pane-head">中文</div>
+            <div class="pane-body" id="bilingual-zh"></div>
+          </div>
+          <div class="bilingual-pane en">
+            <div class="pane-head">English</div>
+            <div class="pane-body" id="bilingual-en"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <dialog class="preset-dialog" id="preset-dialog" aria-labelledby="preset-dialog-title">
+      <form method="dialog" class="preset-shell">
+        <header class="preset-head" id="preset-drag-handle" title="拖动移动浮窗">
+          <div>
+            <h2 id="preset-dialog-title">提示词预设管理器</h2>
+            <p>角色 / 场景 / 服装等提示词组合的本地存取、配图与版本迭代</p>
+          </div>
+          <button class="btn" id="close-presets" type="submit" value="cancel">关闭</button>
+        </header>
+
+        <nav class="preset-types" id="preset-types" aria-label="提示词预设类型"></nav>
+
+        <div class="preset-body">
+          <aside class="preset-list-panel">
+            <div class="preset-list-head">
+              <strong id="preset-list-title">预设列表</strong>
+              <span class="meta" id="preset-list-count">0</span>
+            </div>
+            <div class="preset-list" id="preset-list" role="listbox" aria-label="已保存提示词预设"></div>
+          </aside>
+
+          <section class="preset-detail" aria-label="提示词预设详情">
+            <label>
+              <span>名称</span>
+              <input id="preset-name" type="text" maxlength="80" placeholder="例如：银发水手服角色">
+            </label>
+            <label>
+              <span>设计备注</span>
+              <textarea id="preset-notes" rows="2" maxlength="400" placeholder="给人看的设计意图，可选"></textarea>
+            </label>
+            <div class="preset-images-block">
+              <div class="preset-images-head">
+                <strong>配图</strong>
+                <span class="meta" id="preset-image-count">0 / 48</span>
+                <button class="btn compact" id="preset-import-images" type="button">导入配图</button>
+                <input
+                  id="preset-image-input"
+                  type="file"
+                  accept="image/png,image/jpeg,image/webp,image/gif"
+                  multiple
+                  hidden
+                >
+              </div>
+              <div class="preset-images" id="preset-images" aria-label="预设配图"></div>
+              <p class="preset-image-hint">配图写入 runtime/preset-images 原文件；预设只记本地路径，不存 base64。</p>
+            </div>
+            <p class="preset-meta" id="preset-meta">尚未选择预设</p>
+            <div class="preset-actions">
+              <button class="btn primary" id="preset-save-new" type="button">另存为新预设</button>
+              <button class="btn" id="preset-overwrite" type="button" disabled>覆盖并升版</button>
+              <button class="btn" id="preset-load" type="button" disabled>载入到组合</button>
+              <button class="btn danger" id="preset-delete" type="button" disabled>删除</button>
+            </div>
+            <div class="preset-history" id="preset-history" hidden>
+              <strong>版本历史</strong>
+              <ul id="preset-history-list"></ul>
+            </div>
+          </section>
+        </div>
+      </form>
+      <button class="preset-resize nw" type="button" data-resize="nw" aria-label="左上角调整大小" tabindex="-1"></button>
+      <button class="preset-resize ne" type="button" data-resize="ne" aria-label="右上角调整大小" tabindex="-1"></button>
+      <button class="preset-resize sw" type="button" data-resize="sw" aria-label="左下角调整大小" tabindex="-1"></button>
+      <button class="preset-resize se" type="button" data-resize="se" aria-label="右下角调整大小" tabindex="-1"></button>
+      <button class="preset-resize n" type="button" data-resize="n" aria-label="上边调整大小" tabindex="-1"></button>
+      <button class="preset-resize e" type="button" data-resize="e" aria-label="右边调整大小" tabindex="-1"></button>
+      <button class="preset-resize s" type="button" data-resize="s" aria-label="下边调整大小" tabindex="-1"></button>
+      <button class="preset-resize w" type="button" data-resize="w" aria-label="左边调整大小" tabindex="-1"></button>
+    </dialog>
+  </body>
+</html>

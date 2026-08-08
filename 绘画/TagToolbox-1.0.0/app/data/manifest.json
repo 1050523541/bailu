@@ -1,0 +1,322 @@
+{
+  "artifacts": {
+    "overlay": {
+      "bytes": 219607,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/overlay.json",
+      "sha256": "45BA91EFC66DC390842EF886F696355D4E69EA8D056ECB4C3068D8358CFAE747"
+    },
+    "overlay_manifest": {
+      "bytes": 4246,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/overlay_manifest.json",
+      "sha256": "CAE46D7C1C1CD8B04360A822400EF815C04B976E48DEC5F50C0BCCCAAC9DB6FB"
+    },
+    "taxonomy": {
+      "bytes": 40928,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/taxonomy.json",
+      "sha256": "071C87DDBFD28C0D7EC72FAB45AFC905241AF7AAA91356119006BD3B867951E9"
+    },
+    "works": {
+      "bytes": 346230,
+      "count": 8453,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/works.json",
+      "sha256": "4D0D685875B7A8F6907712BF9840311B02794EB932C9CA04D2067C2052DD02ED"
+    }
+  },
+  "artist_record_schema": {
+    "keys": [
+      "e",
+      "z",
+      "za",
+      "p",
+      "pm",
+      "pn",
+      "o",
+      "y"
+    ],
+    "stable_id": "e",
+    "types": {
+      "e": "canonical artist tag id",
+      "o": "m|n|b",
+      "p": "integer>=0; max(pm,pn)",
+      "pm": "integer>=0; main reported post count",
+      "pn": "integer>=0; max non-sentinel NSFW post count",
+      "y": "safe|sensitive|adult|blocked|unknown",
+      "z": "primary Chinese translation",
+      "za": "string[]"
+    }
+  },
+  "artist_shards": [
+    {
+      "bytes": 2230994,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/artists-00001.json",
+      "first_e": "!!_(lingyou31355)",
+      "last_e": "dong_ja9502",
+      "sha256": "A8E19974D139243CC0837121CEAD4980A830B564E3D3D0CC27B23A663ADA1631",
+      "shard": 1
+    },
+    {
+      "bytes": 2250398,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/artists-00002.json",
+      "first_e": "dong_ji",
+      "last_e": "jit1244",
+      "sha256": "50F7CA4EC170CB898BB62B7A8C65F8930EADF80EA88EDA6A6F4DE45B7860D7D1",
+      "shard": 2
+    },
+    {
+      "bytes": 2263713,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/artists-00003.json",
+      "first_e": "jitai",
+      "last_e": "mikan03260",
+      "sha256": "657C908BB6DE56C3E9F5E860E813A3C334CB3BACFB04B9E11BC24213E6C15170",
+      "shard": 3
+    },
+    {
+      "bytes": 2257770,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/artists-00004.json",
+      "first_e": "mikan03_26",
+      "last_e": "punnn0221",
+      "sha256": "1DDB0A9D65A07102673E2D82DDC784E0F20C1929C24F1175D81511759AA1DC6A",
+      "shard": 4
+    },
+    {
+      "bytes": 2265234,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/artists-00005.json",
+      "first_e": "punnosalt",
+      "last_e": "tappo_(gemori)",
+      "sha256": "0E13AC47A3E39F4C9EBC41866D725BA15E8D6BF0213D104B55BB34D0691B0D91",
+      "shard": 5
+    },
+    {
+      "bytes": 2070683,
+      "count": 22971,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/artists-00006.json",
+      "first_e": "tappy_okamura",
+      "last_e": "zzzzzzzzzzzzzzp",
+      "sha256": "33EFD0216821B16771F21B338ED5D931685FB41BE30BAEB1D7CF48A13E561F0C",
+      "shard": 6
+    }
+  ],
+  "build_id": "3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18",
+  "chunk_size": 25000,
+  "counts": {
+    "artist_safety": {
+      "unknown": 147971
+    },
+    "artist_shards": 6,
+    "artist_source": {
+      "b": 4750,
+      "m": 143221
+    },
+    "artist_total": 147971,
+    "artist_zh_aliases": 80,
+    "browser_total": 152715,
+    "canonical_total": 320895,
+    "canonical_work_links": 81604,
+    "en_aliases": 7268,
+    "excluded_non_artist_omitted": 20209,
+    "non_publishable_review": 0,
+    "release_eligible": 152715,
+    "safety": {
+      "adult": 1282,
+      "sensitive": 621,
+      "unknown": 150812
+    },
+    "shards": 7,
+    "source": {
+      "b": 63160,
+      "m": 88182,
+      "n": 1373
+    },
+    "staging_work_status": {
+      "canonical": 81604,
+      "missing": 19,
+      "review": 18025
+    },
+    "status": {
+      "classified": 53067,
+      "entity": 99648
+    },
+    "unique_works": 8453,
+    "zh_aliases": 44008
+  },
+  "generation": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18",
+  "inputs": {
+    "classification_db": {
+      "bytes": 169873408,
+      "file": "TagToolbox/v3/output/classification_v3.sqlite",
+      "sha256": "D1D877B79B278A1B93CB65B0D3ED852A5A5AB3990948006F1297181DCDBC86BE"
+    },
+    "exporter": {
+      "bytes": 41368,
+      "file": "TagToolbox/v3/export_browser_v3.py",
+      "sha256": "328DA2D37284C564431035A100830A21FF61C162D2EACA069A68FD2D866AB62F"
+    },
+    "overlay": {
+      "bytes": 219607,
+      "file": "TagToolbox/v3/output/overlay_generations/C70D0402BFC639B695E04FB6C2480E00411D4B0062A830B43E7E58AF6B43303F/overlay.json",
+      "sha256": "45BA91EFC66DC390842EF886F696355D4E69EA8D056ECB4C3068D8358CFAE747"
+    },
+    "overlay_manifest": {
+      "bytes": 4246,
+      "file": "TagToolbox/v3/output/overlay_generations/C70D0402BFC639B695E04FB6C2480E00411D4B0062A830B43E7E58AF6B43303F/overlay_manifest.json",
+      "sha256": "CAE46D7C1C1CD8B04360A822400EF815C04B976E48DEC5F50C0BCCCAAC9DB6FB"
+    },
+    "overlay_pointer": {
+      "bytes": 731,
+      "file": "TagToolbox/v3/output/overlay_current.json",
+      "sha256": "D7C005F949B9A2B7F035343E8B9E54E19BDFADD2D8D87D6B7981CE4E39DE8AC2"
+    },
+    "source_databases": {
+      "main": {
+        "bytes": 30937088,
+        "file": "packages/tripose-kit/maps/danbooru_zh.sqlite",
+        "sha256_after": "FD9EC23F730CB760C9BE7487F4C78A62EAA1AABC99CD156C98538637C1B0EA74",
+        "sha256_before": "FD9EC23F730CB760C9BE7487F4C78A62EAA1AABC99CD156C98538637C1B0EA74",
+        "unchanged": true
+      },
+      "nsfw": {
+        "bytes": 12652544,
+        "file": "packages/tripose-kit/maps/danbooru_zh_nsfw.sqlite",
+        "sha256_after": "41A46210B684419607C1655D6A943DD4509545711055694A988536AA390B61FC",
+        "sha256_before": "41A46210B684419607C1655D6A943DD4509545711055694A988536AA390B61FC",
+        "unchanged": true
+      }
+    },
+    "staging_db": {
+      "bytes": 310124544,
+      "file": "TagToolbox/v3/output/tag_taxonomy_v3.sqlite",
+      "sha256": "1FBBD02C3118B9487B0A95D0A0373829FDD461467E971EB4529AEFEA4F202ED0"
+    },
+    "taxonomy_v2": {
+      "bytes": 64358,
+      "file": "TagToolbox/v3/curated/taxonomy_v4.json",
+      "sha256": "95ED731BA4F2408F72DC3821E1605E661AC52498125D56C105C044702E8E3E2A"
+    }
+  },
+  "record_schema": {
+    "keys": [
+      "e",
+      "z",
+      "za",
+      "ea",
+      "p",
+      "pm",
+      "pn",
+      "o",
+      "g",
+      "l",
+      "c",
+      "t",
+      "y",
+      "w"
+    ],
+    "stable_id": "e",
+    "types": {
+      "c": "high|medium|low|unknown",
+      "e": "string",
+      "ea": "string[]",
+      "g": "-1|0|4",
+      "l": "[l1,l2,l3,l4]",
+      "o": "m|n|b",
+      "p": "integer>=0; max(pm,pn)",
+      "pm": "integer>=0; main reported post count",
+      "pn": "integer>=0; max non-sentinel NSFW post count",
+      "t": "classified|review|entity",
+      "w": "canonical copyright tag id or empty string",
+      "y": "safe|sensitive|adult|blocked|unknown",
+      "z": "string",
+      "za": "string[]"
+    }
+  },
+  "release_policy": {
+    "browser_statuses": [
+      "classified",
+      "entity",
+      "review"
+    ],
+    "canonical_work_status_required": "canonical",
+    "copyright_rows_retained_as_nonselectable_work_labels": true,
+    "excluded_artist_rows_retained_as_separate_library": true,
+    "excluded_non_artist_rows_exported_in_selectable_libraries": false,
+    "excluded_rows_exported_in_normal_browser": false,
+    "overlay_distribution_status": "license_review_required",
+    "quarantined_rows_exported": false,
+    "release_eligible_statuses": [
+      "classified",
+      "entity"
+    ],
+    "review_rows_included_for_local_audit": true,
+    "review_rows_publishable": false
+  },
+  "schema_version": "tag-toolbox-browser-v3",
+  "shards": [
+    {
+      "bytes": 5615486,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/tags-00001.json",
+      "first_e": "1girl",
+      "last_e": "spiked_horns",
+      "sha256": "4E5160FE0492777C44B030CE91F96DCA3F91A7FA7E9172522E876141C655EFB3",
+      "shard": 1
+    },
+    {
+      "bytes": 5569508,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/tags-00002.json",
+      "first_e": "spinning_weapon",
+      "last_e": "basil_(hospital_gown)_(omori)",
+      "sha256": "D51EA68586013B2F97C5A264549987ECB47FFA61726A40D82B2D2F60A834765E",
+      "shard": 2
+    },
+    {
+      "bytes": 5540249,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/tags-00003.json",
+      "first_e": "beatrixa_(stella_sora)",
+      "last_e": "sieglinde_(sword)",
+      "sha256": "B945F311ED71479ADFBD6282A2D777D6CA3818D7F30CF295E0A201136C90EB8D",
+      "shard": 3
+    },
+    {
+      "bytes": 5525567,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/tags-00004.json",
+      "first_e": "silva_(summer)_(granblue_fantasy)",
+      "last_e": "trinnia_(pokemon)",
+      "sha256": "4873563DCDE25BC592FE408FF5D6CCC982DC30F2FF1862FBB874DD43C5B77E64",
+      "shard": 4
+    },
+    {
+      "bytes": 5526665,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/tags-00005.json",
+      "first_e": "trobbio_(hollow_knight)",
+      "last_e": "cockatrimon",
+      "sha256": "128C562CC85AEDB17C3E63789CF1506493E24350B89495C6C1714399B60A1C1D",
+      "shard": 5
+    },
+    {
+      "bytes": 5535838,
+      "count": 25000,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/tags-00006.json",
+      "first_e": "coco_(idol)_(mermaid_melody_pichi_pichi_pitch)",
+      "last_e": "sakuya_(sekaiju)",
+      "sha256": "8FE36A8172FE0F61EBA5E4451664C0E418249E8653484D5A8C1FFABE866B62FD",
+      "shard": 6
+    },
+    {
+      "bytes": 572200,
+      "count": 2715,
+      "file": "generations/3317499CA8972C27F239A76396AA6E7325B90BC1FDBBD550180A38B751EA3B18/tags-00007.json",
+      "first_e": "sakuya_tobari",
+      "last_e": "🌩",
+      "sha256": "6740B9D3EB8EDBBDB20B49819134195797006F0EF04D2711F4DF3B65650C32D1",
+      "shard": 7
+    }
+  ]
+}

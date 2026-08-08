@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界": {
+      "type": "object",
+      "properties": {
+        "当前时间": {
+          "default": "待初始化",
+          "type": "string"
+        },
+        "当前地点": {
+          "default": "待初始化",
+          "type": "string"
+        },
+        "近期事务": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "事务名"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "description": "事务描述"
+          }
+        }
+      }
+    },
+    "主角": {
+      "type": "object",
+      "properties": {
+        "身份": {
+          "default": "玩家扮演的男主角",
+          "type": "string"
+        },
+        "出身": {
+          "default": "普通男友",
+          "type": "string",
+          "enum": [
+            "普通男友",
+            "隐藏富二代"
+          ]
+        },
+        "催眠风格": {
+          "default": "渐进暗示",
+          "type": "string",
+          "enum": [
+            "渐进暗示",
+            "雷厉风行"
+          ]
+        },
+        "开局模式": {
+          "default": "第一章开头",
+          "type": "string",
+          "enum": [
+            "第一章开头",
+            "第二章末尾快进"
+          ]
+        },
+        "催眠能力": {
+          "default": "视线暗示与常识修改",
+          "type": "string"
+        },
+        "目标": {
+          "default": "让三个女人在春节期间彻底沉沦",
+          "type": "string"
+        }
+      }
+    },
+    "芸曦": {
+      "type": "object",
+      "properties": {
+        "催眠阶段": {
+          "default": 0,
+          "type": "number"
+        },
+        "身体部位": {
+          "default": {
+            "脸": "待初始化",
+            "胸": "待初始化",
+            "下体": "待初始化",
+            "腿": "待初始化",
+            "全身": "待初始化"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "脸",
+              "胸",
+              "下体",
+              "腿",
+              "全身"
+            ]
+          },
+          "additionalProperties": {
+            "default": "待初始化",
+            "type": "string"
+          },
+          "required": [
+            "脸",
+            "胸",
+            "下体",
+            "腿",
+            "全身"
+          ]
+        },
+        "服装": {
+          "default": "待初始化",
+          "type": "string"
+        },
+        "心里话": {
+          "default": "待初始化",
+          "type": "string"
+        }
+      }
+    },
+    "戚巧瑜": {
+      "type": "object",
+      "properties": {
+        "催眠阶段": {
+          "default": 0,
+          "type": "number"
+        },
+        "身体部位": {
+          "default": {
+            "脸": "待初始化",
+            "胸": "待初始化",
+            "下体": "待初始化",
+            "腿": "待初始化",
+            "全身": "待初始化"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "脸",
+              "胸",
+              "下体",
+              "腿",
+              "全身"
+            ]
+          },
+          "additionalProperties": {
+            "default": "待初始化",
+            "type": "string"
+          },
+          "required": [
+            "脸",
+            "胸",
+            "下体",
+            "腿",
+            "全身"
+          ]
+        },
+        "服装": {
+          "default": "待初始化",
+          "type": "string"
+        },
+        "心里话": {
+          "default": "待初始化",
+          "type": "string"
+        }
+      }
+    },
+    "璐瑶": {
+      "type": "object",
+      "properties": {
+        "催眠阶段": {
+          "default": 0,
+          "type": "number"
+        },
+        "身体部位": {
+          "default": {
+            "脸": "待初始化",
+            "胸": "待初始化",
+            "下体": "待初始化",
+            "腿": "待初始化",
+            "全身": "待初始化"
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "脸",
+              "胸",
+              "下体",
+              "腿",
+              "全身"
+            ]
+          },
+          "additionalProperties": {
+            "default": "待初始化",
+            "type": "string"
+          },
+          "required": [
+            "脸",
+            "胸",
+            "下体",
+            "腿",
+            "全身"
+          ]
+        },
+        "服装": {
+          "default": "待初始化",
+          "type": "string"
+        },
+        "心里话": {
+          "default": "待初始化",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "世界",
+    "主角",
+    "芸曦",
+    "戚巧瑜",
+    "璐瑶"
+  ]
+}

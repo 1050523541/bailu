@@ -1,0 +1,118 @@
+{
+  "artifact": {
+    "accepted_aliases": 7268,
+    "accepted_identity_aliases": 97,
+    "bytes": 219607,
+    "file": "overlay.json",
+    "sha256": "45BA91EFC66DC390842EF886F696355D4E69EA8D056ECB4C3068D8358CFAE747"
+  },
+  "counts": {
+    "accepted_aliases": 7268,
+    "accepted_identity_aliases": 97,
+    "accepted_network_aliases": 7171,
+    "accepted_targets": 5277,
+    "input_identity_rows": 97,
+    "input_network_rows": 8059,
+    "input_rows": 8156,
+    "rejected_by_reason": {
+      "canonical_identity_merge_not_applied": 853,
+      "target_not_in_browser": 35
+    },
+    "rejected_identity_rows": 0,
+    "rejected_network_rows": 888,
+    "rejected_rows": 888,
+    "release_eligible_aliases": 7268,
+    "review_only_aliases": 0
+  },
+  "inputs": {
+    "alias_merges": {
+      "bytes": 2456308,
+      "file": "TagToolbox/v2/network/alias_merges.csv",
+      "rows": 8059,
+      "sha256": "0DA46FF7847C15C57AED65375097AA3307F1925E76E3543EA3C11FE7F4FD83FF"
+    },
+    "builder": {
+      "bytes": 29036,
+      "file": "TagToolbox/v3/build_overlay_v3.py",
+      "sha256": "FB62722D7BF88799965F3055BB734147A9B3CC268B7B3EBAB13C08EB6C9B1D67"
+    },
+    "classification_db": {
+      "bytes": 169873408,
+      "file": "TagToolbox/v3/output/classification_v3.sqlite",
+      "sha256": "450B52B8FCD303AD3379CE1EC132B4325B30928333A35EABC069BD973F85C4C3"
+    },
+    "identity_aliases": {
+      "bytes": 27214,
+      "file": "TagToolbox/v3/curated/character_identity_aliases.csv",
+      "rows": 97,
+      "sha256": "A48EA812E944F6307E774CC53EB83FD09DCFF747ECE6F5CF7D0661694225F95A"
+    },
+    "network_manifest": {
+      "bytes": 11446,
+      "file": "TagToolbox/v2/network/network_manifest.json",
+      "sha256": "DB29A3F5CC4D93A3BE892B3FDB2FB72C39B28631A61564A6DDE61AA1440B2C0A"
+    },
+    "source_databases": {
+      "main": {
+        "file": "packages/tripose-kit/maps/danbooru_zh.sqlite",
+        "sha256_after": "FD9EC23F730CB760C9BE7487F4C78A62EAA1AABC99CD156C98538637C1B0EA74",
+        "sha256_before": "FD9EC23F730CB760C9BE7487F4C78A62EAA1AABC99CD156C98538637C1B0EA74",
+        "unchanged": true
+      },
+      "nsfw": {
+        "file": "packages/tripose-kit/maps/danbooru_zh_nsfw.sqlite",
+        "sha256_after": "41A46210B684419607C1655D6A943DD4509545711055694A988536AA390B61FC",
+        "sha256_before": "41A46210B684419607C1655D6A943DD4509545711055694A988536AA390B61FC",
+        "unchanged": true
+      }
+    },
+    "staging_db": {
+      "bytes": 310124544,
+      "file": "TagToolbox/v3/output/tag_taxonomy_v3.sqlite",
+      "sha256": "1FBBD02C3118B9487B0A95D0A0373829FDD461467E971EB4529AEFEA4F202ED0"
+    }
+  },
+  "license": {
+    "api_payloads_embedded": false,
+    "distribution_status": "unresolved",
+    "local_review_only": true,
+    "note": "Alias-name pairs are retained for local review; public distribution still requires a separate data-license decision.",
+    "risk_rows": 4,
+    "software_license_not_assumed_for_api_or_wiki_data": true,
+    "source_urls_embedded": false,
+    "wiki_bodies_embedded": false
+  },
+  "overlay_id": "B68B1E3AFA02E3A650CF0A6DC51BDBCAA905F6C383F3665B1B9CFD961F4C9FE4",
+  "policy": {
+    "accepted_action": "add_search_alias_to_existing",
+    "accepted_identity_action": "merge_search_alias_to_existing_character",
+    "browser_target_statuses": [
+      "classified",
+      "entity",
+      "review"
+    ],
+    "canonical_collisions_rejected": true,
+    "canonical_identity_merges_applied": true,
+    "curated_identity_search_aliases_applied": true,
+    "identity_antecedent_rule_id": "v3.curated.character_identity_alias",
+    "identity_antecedents_must_be_excluded": true,
+    "identity_targets_must_be_authoritative_characters": true,
+    "multiple_target_aliases_rejected": true,
+    "release_eligible_target_statuses": [
+      "classified",
+      "entity"
+    ],
+    "source_canonical_rows_mutated": false
+  },
+  "schema_version": "tag-toolbox-overlay-v3",
+  "snapshot": {
+    "alias_snapshot_sha256": [
+      "F30E5B7155476F25626430DF1B1AB77E5B8ABA6A1A737F19CE7E4A40C80F291C"
+    ],
+    "network_candidate_digest": "FF2E78184C4F047CC4DEC9BCDE0E9D2FD06D5D39A2BE3E9C7D70C351F8205C27",
+    "network_status": "pass",
+    "site_git_hashes": [
+      "16d27c0c0f3ef8c521711e581aa090081c9bd97d"
+    ]
+  }
+}

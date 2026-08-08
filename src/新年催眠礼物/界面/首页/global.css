@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --night: #17110e;
+  --night-soft: #241a14;
+  --paper: #f6ecdb;
+  --paper-deep: #e6d3b4;
+  --ink: #241a14;
+  --crimson: #b32d35;
+  --crimson-deep: #7e1e25;
+  --gold: #c99b4a;
+  --gold-soft: #ecd3a0;
+  --muted: #8a7763;
+  --line: rgba(246, 236, 219, 0.18);
+  --font-body: 'Noto Serif SC', 'Songti SC', 'Microsoft YaHei', serif;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--night);
+  color: var(--paper);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+button {
+  font-family: inherit;
+}

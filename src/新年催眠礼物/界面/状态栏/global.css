@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #1b1612;
+  --paper: #f7efe2;
+  --paper-deep: #eadbc4;
+  --crimson: #a3262e;
+  --crimson-deep: #6f1720;
+  --gold: #c89b4a;
+  --gold-soft: #e5c98f;
+  --muted: #7d6d5d;
+  --line: rgba(27, 22, 18, 0.22);
+  --font-body: 'Noto Serif SC', 'Songti SC', 'Microsoft YaHei', serif;
+}
+
+body {
+  background: transparent;
+  font-family: var(--font-body);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+}
