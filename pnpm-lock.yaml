@@ -19,7 +19,11 @@ importers:
         version: 14.4.0(vue@3.5.45(typescript@6.0.3))
       '@vueuse/integrations':
         specifier: ^14.4.0
+<<<<<<< HEAD
         version: 14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3))
+=======
+        version: 14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3))
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
       '@vueuse/shared':
         specifier: ^14.4.0
         version: 14.4.0(vue@3.5.45(typescript@6.0.3))
@@ -76,7 +80,11 @@ importers:
         version: 3.5.45(typescript@6.0.3)
       vue-final-modal:
         specifier: ^4.5.6
+<<<<<<< HEAD
         version: 4.5.6(@vueuse/core@14.4.0(vue@3.5.45(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3)))(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3))
+=======
+        version: 4.5.6(@vueuse/core@14.4.0(vue@3.5.45(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3)))(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3))
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
       vue-router:
         specifier: ^5.5.0
         version: 5.5.0(@vue/compiler-sfc@3.5.45)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.45(typescript@6.0.3)))(vue@3.5.45(typescript@6.0.3))(webpack@5.112.2)
@@ -449,8 +457,13 @@ packages:
   '@jridgewell/remapping@2.3.5':
     resolution: {integrity: sha512-LI9u/+laYG4Ds1TDKSJW2YPrIlcVYOwi2fUC6xB43lueCjgxV4lffOCZCtYFiH6TNOX+tQKXx97T4IKHbhyHEQ==}
 
+<<<<<<< HEAD
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
+=======
+  '@jridgewell/resolve-uri@3.1.3':
+    resolution: {integrity: sha512-lhTtjtoEArWBjismtfS761S9Hlyn+nIZqOZVYoZ1Xn82PMNMVnk+jj/NhC4fAXGTs7ydONcJiR5vyQBTMDu27g==}
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
     engines: {node: '>=6.0.0'}
 
   '@jridgewell/source-map@0.3.11':
@@ -2053,8 +2066,13 @@ packages:
   flatted@3.4.4:
     resolution: {integrity: sha512-5+ybhBZANEJxaH3X5evAFatUxLfEHSr7n6kYJ+1Qd0mUqr4eu9gIf6GDbWHf8RJijHrjjO8G+la14SlL2SeS1Q==}
 
+<<<<<<< HEAD
   focus-trap@8.2.2:
     resolution: {integrity: sha512-qV0g8hRYBqgACcFOH3f9wXc4zPKhr/0z9RI2a6ZijZ72EeBi4g8oBy8zAWuUR1TsMpOzwpUMFvjdasrC41Joug==}
+=======
+  focus-trap@7.6.5:
+    resolution: {integrity: sha512-7Ke1jyybbbPZyZXFxEftUtxFGLMpE2n6A+z//m4CRDlj0hW+o3iYSmh8nFlYMurOiJVDmJRilUQtJr08KfIxlg==}
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
 
   follow-redirects@1.16.3:
     resolution: {integrity: sha512-toOSoqN6d51Wjf1aOFJYcoVv1aND9rj/CwjLU0Vz40oDuSpWDayCeKe4JpL5NL0WdFvoOOCI3BRo69HahjbR1A==}
@@ -4439,7 +4457,11 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
 
+<<<<<<< HEAD
   '@jridgewell/resolve-uri@3.1.2': {}
+=======
+  '@jridgewell/resolve-uri@3.1.3': {}
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
 
   '@jridgewell/source-map@0.3.11':
     dependencies:
@@ -4450,12 +4472,20 @@ snapshots:
 
   '@jridgewell/trace-mapping@0.3.31':
     dependencies:
+<<<<<<< HEAD
       '@jridgewell/resolve-uri': 3.1.2
+=======
+      '@jridgewell/resolve-uri': 3.1.3
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
       '@jridgewell/sourcemap-codec': 1.6.0
 
   '@jridgewell/trace-mapping@0.3.9':
     dependencies:
+<<<<<<< HEAD
       '@jridgewell/resolve-uri': 3.1.2
+=======
+      '@jridgewell/resolve-uri': 3.1.3
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
       '@jridgewell/sourcemap-codec': 1.6.0
 
   '@keyv/bigmap@1.3.1(keyv@5.6.0)':
@@ -5024,14 +5054,22 @@ snapshots:
       '@vueuse/shared': 14.4.0(vue@3.5.45(typescript@6.0.3))
       vue: 3.5.45(typescript@6.0.3)
 
+<<<<<<< HEAD
   '@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3))':
+=======
+  '@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3))':
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
     dependencies:
       '@vueuse/core': 14.4.0(vue@3.5.45(typescript@6.0.3))
       '@vueuse/shared': 14.4.0(vue@3.5.45(typescript@6.0.3))
       vue: 3.5.45(typescript@6.0.3)
     optionalDependencies:
       axios: 1.18.1
+<<<<<<< HEAD
       focus-trap: 8.2.2
+=======
+      focus-trap: 7.6.5
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
 
   '@vueuse/metadata@10.11.1': {}
 
@@ -6173,7 +6211,11 @@ snapshots:
 
   flatted@3.4.4: {}
 
+<<<<<<< HEAD
   focus-trap@8.2.2:
+=======
+  focus-trap@7.6.5:
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
     dependencies:
       tabbable: 6.5.1
 
@@ -8314,11 +8356,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+<<<<<<< HEAD
   vue-final-modal@4.5.6(@vueuse/core@14.4.0(vue@3.5.45(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3)))(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3)):
     dependencies:
       '@vueuse/core': 14.4.0(vue@3.5.45(typescript@6.0.3))
       '@vueuse/integrations': 14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3))
       focus-trap: 8.2.2
+=======
+  vue-final-modal@4.5.6(@vueuse/core@14.4.0(vue@3.5.45(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3)))(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3)):
+    dependencies:
+      '@vueuse/core': 14.4.0(vue@3.5.45(typescript@6.0.3))
+      '@vueuse/integrations': 14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3))
+      focus-trap: 7.6.5
+>>>>>>> fbd0c2c5f019bec7ca3a145029527629c529b4b3
       vue: 3.5.45(typescript@6.0.3)
 
   vue-loader@17.4.2(@vue/compiler-sfc@3.5.45)(vue@3.5.45(typescript@6.0.3))(webpack@5.112.2):
