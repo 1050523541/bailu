@@ -19,7 +19,11 @@ importers:
         version: 14.4.0(vue@3.5.45(typescript@6.0.3))
       '@vueuse/integrations':
         specifier: ^14.4.0
+<<<<<<< HEAD
         version: 14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3))
+=======
+        version: 14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3))
+>>>>>>> f8b20765c5ce38a1e065c2a84b9882d8fac75f97
       '@vueuse/shared':
         specifier: ^14.4.0
         version: 14.4.0(vue@3.5.45(typescript@6.0.3))
@@ -76,7 +80,11 @@ importers:
         version: 3.5.45(typescript@6.0.3)
       vue-final-modal:
         specifier: ^4.5.6
+<<<<<<< HEAD
         version: 4.5.6(@vueuse/core@14.4.0(vue@3.5.45(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3)))(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3))
+=======
+        version: 4.5.6(@vueuse/core@14.4.0(vue@3.5.45(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3)))(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3))
+>>>>>>> f8b20765c5ce38a1e065c2a84b9882d8fac75f97
       vue-router:
         specifier: ^5.5.1
         version: 5.5.1(@vue/compiler-sfc@3.5.45)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.45(typescript@6.0.3)))(vue@3.5.45(typescript@6.0.3))(webpack@5.112.2)
@@ -2057,8 +2065,13 @@ packages:
   flatted@3.4.4:
     resolution: {integrity: sha512-5+ybhBZANEJxaH3X5evAFatUxLfEHSr7n6kYJ+1Qd0mUqr4eu9gIf6GDbWHf8RJijHrjjO8G+la14SlL2SeS1Q==}
 
+<<<<<<< HEAD
   focus-trap@8.2.2:
     resolution: {integrity: sha512-qV0g8hRYBqgACcFOH3f9wXc4zPKhr/0z9RI2a6ZijZ72EeBi4g8oBy8zAWuUR1TsMpOzwpUMFvjdasrC41Joug==}
+=======
+  focus-trap@7.6.5:
+    resolution: {integrity: sha512-7Ke1jyybbbPZyZXFxEftUtxFGLMpE2n6A+z//m4CRDlj0hW+o3iYSmh8nFlYMurOiJVDmJRilUQtJr08KfIxlg==}
+>>>>>>> f8b20765c5ce38a1e065c2a84b9882d8fac75f97
 
   follow-redirects@1.16.3:
     resolution: {integrity: sha512-toOSoqN6d51Wjf1aOFJYcoVv1aND9rj/CwjLU0Vz40oDuSpWDayCeKe4JpL5NL0WdFvoOOCI3BRo69HahjbR1A==}
@@ -5035,14 +5048,22 @@ snapshots:
       '@vueuse/shared': 14.4.0(vue@3.5.45(typescript@6.0.3))
       vue: 3.5.45(typescript@6.0.3)
 
+<<<<<<< HEAD
   '@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3))':
+=======
+  '@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3))':
+>>>>>>> f8b20765c5ce38a1e065c2a84b9882d8fac75f97
     dependencies:
       '@vueuse/core': 14.4.0(vue@3.5.45(typescript@6.0.3))
       '@vueuse/shared': 14.4.0(vue@3.5.45(typescript@6.0.3))
       vue: 3.5.45(typescript@6.0.3)
     optionalDependencies:
       axios: 1.18.1
+<<<<<<< HEAD
       focus-trap: 8.2.2
+=======
+      focus-trap: 7.6.5
+>>>>>>> f8b20765c5ce38a1e065c2a84b9882d8fac75f97
 
   '@vueuse/metadata@10.11.1': {}
 
@@ -6188,7 +6209,11 @@ snapshots:
 
   flatted@3.4.4: {}
 
+<<<<<<< HEAD
   focus-trap@8.2.2:
+=======
+  focus-trap@7.6.5:
+>>>>>>> f8b20765c5ce38a1e065c2a84b9882d8fac75f97
     dependencies:
       tabbable: 6.5.2
 
@@ -8337,11 +8362,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+<<<<<<< HEAD
   vue-final-modal@4.5.6(@vueuse/core@14.4.0(vue@3.5.45(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3)))(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3)):
     dependencies:
       '@vueuse/core': 14.4.0(vue@3.5.45(typescript@6.0.3))
       '@vueuse/integrations': 14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.45(typescript@6.0.3))
       focus-trap: 8.2.2
+=======
+  vue-final-modal@4.5.6(@vueuse/core@14.4.0(vue@3.5.45(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3)))(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3)):
+    dependencies:
+      '@vueuse/core': 14.4.0(vue@3.5.45(typescript@6.0.3))
+      '@vueuse/integrations': 14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.45(typescript@6.0.3))
+      focus-trap: 7.6.5
+>>>>>>> f8b20765c5ce38a1e065c2a84b9882d8fac75f97
       vue: 3.5.45(typescript@6.0.3)
 
   vue-loader@17.4.2(@vue/compiler-sfc@3.5.45)(vue@3.5.45(typescript@6.0.3))(webpack@5.112.2):
