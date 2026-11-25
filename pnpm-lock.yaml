@@ -19,7 +19,11 @@ importers:
         version: 14.4.0(vue@3.5.46(typescript@6.0.3))
       '@vueuse/integrations':
         specifier: ^14.4.0
+<<<<<<< HEAD
         version: 14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.46(typescript@6.0.3))
+=======
+        version: 14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.46(typescript@6.0.3))
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
       '@vueuse/shared':
         specifier: ^14.4.0
         version: 14.4.0(vue@3.5.46(typescript@6.0.3))
@@ -76,7 +80,11 @@ importers:
         version: 3.5.46(typescript@6.0.3)
       vue-final-modal:
         specifier: ^4.5.6
+<<<<<<< HEAD
         version: 4.5.6(@vueuse/core@14.4.0(vue@3.5.46(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.46(typescript@6.0.3)))(focus-trap@8.2.2)(vue@3.5.46(typescript@6.0.3))
+=======
+        version: 4.5.6(@vueuse/core@14.4.0(vue@3.5.46(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.46(typescript@6.0.3)))(focus-trap@7.6.5)(vue@3.5.46(typescript@6.0.3))
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
       vue-router:
         specifier: ^5.5.1
         version: 5.5.1(@vue/compiler-sfc@3.5.46)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.46(typescript@6.0.3)))(vue@3.5.46(typescript@6.0.3))(webpack@5.113.0)
@@ -236,7 +244,11 @@ importers:
         version: 9.6.2(loader-utils@1.4.2)(typescript@6.0.3)(webpack@5.113.0)
       ts-node:
         specifier: ^10.9.2
+<<<<<<< HEAD
         version: 10.9.2(@types/node@26.6.7)(typescript@6.0.3)
+=======
+        version: 10.9.2(@types/node@26.6.9)(typescript@6.0.3)
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
       tsconfig-paths-webpack-plugin:
         specifier: ^4.2.0
         version: 4.2.0
@@ -724,8 +736,13 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
+<<<<<<< HEAD
   '@types/node@26.6.7':
     resolution: {integrity: sha512-tovuRfrUILu6v46bMG+BgXxMvsqPBx2WO2as8Rpln+JTff1dbexMtAM4KFTejmL0axsnSWViCW7MecUQpLuBRA==}
+=======
+  '@types/node@26.6.9':
+    resolution: {integrity: sha512-MkLVXFazHKL5/3lkiYqaSti6Ohv0Vi6z2bPwUQAs/aXUuuY8go4hR3mz8Kvu0lBC2HH0Zn+ON2G9hTglqDD48A==}
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
 
   '@types/q@1.5.8':
     resolution: {integrity: sha512-hroOstUScF6zhIi+5+x0dzqrHA1EJi+Irri6b1fxolMTqqHIV/Cg77EtnQcZqZCu8hR3mX2BzIxN4/GzI68Kfw==}
@@ -2058,8 +2075,13 @@ packages:
   flatted@3.4.4:
     resolution: {integrity: sha512-5+ybhBZANEJxaH3X5evAFatUxLfEHSr7n6kYJ+1Qd0mUqr4eu9gIf6GDbWHf8RJijHrjjO8G+la14SlL2SeS1Q==}
 
+<<<<<<< HEAD
   focus-trap@8.2.2:
     resolution: {integrity: sha512-qV0g8hRYBqgACcFOH3f9wXc4zPKhr/0z9RI2a6ZijZ72EeBi4g8oBy8zAWuUR1TsMpOzwpUMFvjdasrC41Joug==}
+=======
+  focus-trap@7.6.5:
+    resolution: {integrity: sha512-7Ke1jyybbbPZyZXFxEftUtxFGLMpE2n6A+z//m4CRDlj0hW+o3iYSmh8nFlYMurOiJVDmJRilUQtJr08KfIxlg==}
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
 
   follow-redirects@1.16.3:
     resolution: {integrity: sha512-toOSoqN6d51Wjf1aOFJYcoVv1aND9rj/CwjLU0Vz40oDuSpWDayCeKe4JpL5NL0WdFvoOOCI3BRo69HahjbR1A==}
@@ -4625,7 +4647,11 @@ snapshots:
 
   '@types/cors@2.8.19':
     dependencies:
+<<<<<<< HEAD
       '@types/node': 26.6.7
+=======
+      '@types/node': 26.6.9
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
 
   '@types/debug@4.1.13':
     dependencies:
@@ -4670,7 +4696,11 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
+<<<<<<< HEAD
   '@types/node@26.6.7':
+=======
+  '@types/node@26.6.9':
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
     dependencies:
       undici-types: 8.9.0
 
@@ -4704,7 +4734,11 @@ snapshots:
 
   '@types/webpack@5.28.5(postcss@8.5.33)(webpack-cli@7.3.1)':
     dependencies:
+<<<<<<< HEAD
       '@types/node': 26.6.7
+=======
+      '@types/node': 26.6.9
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
       tapable: 2.3.4
       webpack: 5.113.0(postcss@8.5.33)(webpack-cli@7.3.1)
     transitivePeerDependencies:
@@ -4728,7 +4762,11 @@ snapshots:
 
   '@types/ws@8.18.2':
     dependencies:
+<<<<<<< HEAD
       '@types/node': 26.6.7
+=======
+      '@types/node': 26.6.9
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
 
   '@typescript-eslint/eslint-plugin@8.74.0(@typescript-eslint/parser@8.74.0(eslint@10.15.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.15.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
@@ -5036,14 +5074,22 @@ snapshots:
       '@vueuse/shared': 14.4.0(vue@3.5.46(typescript@6.0.3))
       vue: 3.5.46(typescript@6.0.3)
 
+<<<<<<< HEAD
   '@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.46(typescript@6.0.3))':
+=======
+  '@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.46(typescript@6.0.3))':
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
     dependencies:
       '@vueuse/core': 14.4.0(vue@3.5.46(typescript@6.0.3))
       '@vueuse/shared': 14.4.0(vue@3.5.46(typescript@6.0.3))
       vue: 3.5.46(typescript@6.0.3)
     optionalDependencies:
       axios: 1.18.1
+<<<<<<< HEAD
       focus-trap: 8.2.2
+=======
+      focus-trap: 7.6.5
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
 
   '@vueuse/metadata@10.11.1': {}
 
@@ -5809,7 +5855,11 @@ snapshots:
   engine.io@6.6.13:
     dependencies:
       '@types/cors': 2.8.19
+<<<<<<< HEAD
       '@types/node': 26.6.7
+=======
+      '@types/node': 26.6.9
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
       '@types/ws': 8.18.2
       accepts: 1.3.8
       cookie: 0.7.2
@@ -6187,7 +6237,11 @@ snapshots:
 
   flatted@3.4.4: {}
 
+<<<<<<< HEAD
   focus-trap@8.2.2:
+=======
+  focus-trap@7.6.5:
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
     dependencies:
       tabbable: 6.5.2
 
@@ -6716,7 +6770,11 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
+<<<<<<< HEAD
       '@types/node': 26.6.7
+=======
+      '@types/node': 26.6.9
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -8009,14 +8067,22 @@ snapshots:
     optionalDependencies:
       loader-utils: 1.4.2
 
+<<<<<<< HEAD
   ts-node@10.9.2(@types/node@26.6.7)(typescript@6.0.3):
+=======
+  ts-node@10.9.2(@types/node@26.6.9)(typescript@6.0.3):
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.14
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
+<<<<<<< HEAD
       '@types/node': 26.6.7
+=======
+      '@types/node': 26.6.9
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
       acorn: 8.19.0
       acorn-walk: 8.3.5
       arg: 4.1.3
@@ -8333,11 +8399,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+<<<<<<< HEAD
   vue-final-modal@4.5.6(@vueuse/core@14.4.0(vue@3.5.46(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.46(typescript@6.0.3)))(focus-trap@8.2.2)(vue@3.5.46(typescript@6.0.3)):
     dependencies:
       '@vueuse/core': 14.4.0(vue@3.5.46(typescript@6.0.3))
       '@vueuse/integrations': 14.4.0(axios@1.18.1)(focus-trap@8.2.2)(vue@3.5.46(typescript@6.0.3))
       focus-trap: 8.2.2
+=======
+  vue-final-modal@4.5.6(@vueuse/core@14.4.0(vue@3.5.46(typescript@6.0.3)))(@vueuse/integrations@14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.46(typescript@6.0.3)))(focus-trap@7.6.5)(vue@3.5.46(typescript@6.0.3)):
+    dependencies:
+      '@vueuse/core': 14.4.0(vue@3.5.46(typescript@6.0.3))
+      '@vueuse/integrations': 14.4.0(axios@1.18.1)(focus-trap@7.6.5)(vue@3.5.46(typescript@6.0.3))
+      focus-trap: 7.6.5
+>>>>>>> c264c1a620cdf0169281cbcc1ead53e3dcc7f4dc
       vue: 3.5.46(typescript@6.0.3)
 
   vue-loader@17.4.2(@vue/compiler-sfc@3.5.46)(vue@3.5.46(typescript@6.0.3))(webpack@5.113.0):
